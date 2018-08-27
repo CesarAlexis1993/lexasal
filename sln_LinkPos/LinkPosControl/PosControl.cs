@@ -51,6 +51,18 @@ namespace LinkPosControl
             }
         }
 
+        public IQueryable<T> GetAll<T>(Expression<Func<T, bool>> predicate) where T : class
+        {
+            try
+            {
+                return context.Set<T>().Where(predicate);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Se ha generado un error al intentar obtener las entidades: " + e.Message);
+            }
+        }
+
         public T Get<T>(Expression<Func<T, bool>> predicate) where T : class
         {
             T entidad = null;
