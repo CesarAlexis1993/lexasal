@@ -39,34 +39,31 @@ namespace LinkPosControl
 
         }
 
-        public List<T> GetAll<T>() where T : class
+        public IQueryable<T> GetAll<T>() where T : class
         {
-            //using (var dbcxtransact = context.Database.BeginTransaction())
-            //{
-            //    try
-            //    {
-            //        if (entidad != null)
-            //        {
-            //            context.Entry(entidad).State = EntityState.Modified;
-            //            context.SaveChanges();
-            //            dbcxtransact.Commit();
-            //        }
-            //    }
-            //    catch (Exception e)
-            //    {
-            //        dbcxtransact.Rollback();
-            //    }
-            //}
-            return null;
+            try
+            {
+                return context.Set<T>();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Se ha generado un error al intentar obtener las entidades: " + e.Message);
+            }
         }
 
         public T Get<T>(Expression<Func<T, bool>> predicate) where T : class
         {
             T entidad = null;
+
+            try
             {
                 entidad = context.Set<T>().FirstOrDefault(predicate);
+                return entidad;
             }
-            return entidad;
+            catch (Exception e)
+            {
+                throw new Exception("Se ha generado un error al intentar obtener la entidad: " + e.Message);
+            }
         }
 
         public void Update(object entidad)
@@ -85,6 +82,7 @@ namespace LinkPosControl
                 catch (Exception e)
                 {
                     dbcxtransact.Rollback();
+                    throw new Exception("Se ha generado un error al intentar actualizar la entidad: " + e.Message);
                 }
             }
 
@@ -106,6 +104,7 @@ namespace LinkPosControl
                 catch (Exception e)
                 {
                     dbcxtransact.Rollback();
+                    throw new Exception("Se ha generado un error al intentar eliminar la entidad: " + e.Message);
                 }
             }
 
