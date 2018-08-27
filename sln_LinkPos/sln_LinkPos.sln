@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkPosControl", "LinkPosCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkPos", "LinkPos\LinkPos.csproj", "{2C3E283F-E47F-449B-A627-A4E96A383E5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerReceiptExtensions", "CustomerReceiptExtensions\CustomerReceiptExtensions.csproj", "{4D8480DD-2BE0-43F2-9D5F-B0156AF00377}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalTriggers", "ExternalTriggers\ExternalTriggers.csproj", "{6D05C781-B9D2-473D-A6C6-13E77FF04644}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{2C3E283F-E47F-449B-A627-A4E96A383E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C3E283F-E47F-449B-A627-A4E96A383E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C3E283F-E47F-449B-A627-A4E96A383E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D8480DD-2BE0-43F2-9D5F-B0156AF00377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D8480DD-2BE0-43F2-9D5F-B0156AF00377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D8480DD-2BE0-43F2-9D5F-B0156AF00377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D8480DD-2BE0-43F2-9D5F-B0156AF00377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D05C781-B9D2-473D-A6C6-13E77FF04644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D05C781-B9D2-473D-A6C6-13E77FF04644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D05C781-B9D2-473D-A6C6-13E77FF04644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D05C781-B9D2-473D-A6C6-13E77FF04644}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
