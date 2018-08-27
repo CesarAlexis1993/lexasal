@@ -9,34 +9,13 @@ using LinkPosModelo;
 
 namespace LinkPosControl
 {
-    public class PosControl
+    public class DataPos
     {
         private ContextPosData context;
 
-        public PosControl()
+        public DataPos()
         {
             context = new ContextPosData();
-        }
-
-        public void Create(object entidad)
-        {
-            using (var dbcxtransact = context.Database.BeginTransaction())
-            {
-                try
-                {
-                    if (entidad != null)
-                    {
-                        context.Entry(entidad).State = EntityState.Added;
-                        context.SaveChanges();
-                        dbcxtransact.Commit();
-                    }
-                }
-                catch (Exception e)
-                {
-                    dbcxtransact.Rollback();
-                }
-            }
-
         }
 
         public IQueryable<T> GetAll<T>() where T : class
@@ -76,6 +55,27 @@ namespace LinkPosControl
             {
                 throw new Exception("Se ha generado un error al intentar obtener la entidad: " + e.Message);
             }
+        }
+
+        public void Create(object entidad)
+        {
+            using (var dbcxtransact = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    if (entidad != null)
+                    {
+                        context.Entry(entidad).State = EntityState.Added;
+                        context.SaveChanges();
+                        dbcxtransact.Commit();
+                    }
+                }
+                catch (Exception e)
+                {
+                    dbcxtransact.Rollback();
+                }
+            }
+
         }
 
         public void Update(object entidad)
