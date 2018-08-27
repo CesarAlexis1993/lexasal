@@ -46,5 +46,11 @@
     <Compile Include="EndOfDayTrigger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LinkPos\LinkPos.csproj">
+      <Project>{2c3e283f-e47f-449b-a627-a4e96a383e5d}</Project>
+      <Name>LinkPos</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

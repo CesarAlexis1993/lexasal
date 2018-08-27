@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LinkPos;
+using System;
 
 namespace ExternalTriggers
 {
@@ -12,6 +9,10 @@ namespace ExternalTriggers
         {
             try
             {
+                Facturacion factu = new Facturacion();
+
+                if(factu.)
+
                 return true;
             }
             catch (Exception e)

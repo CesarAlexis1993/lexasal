@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LinkPos
 {
-    public partial class FrmMain : Form
+    public partial class Facturacion : Form
     {
-        public FrmMain()
+        public Facturacion()
         {
             InitializeComponent();
         }
