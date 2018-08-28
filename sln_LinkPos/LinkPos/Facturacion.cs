@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LinkPosControl.Vistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace LinkPos
     public partial class Facturacion : Form
     {
         private long OrderID;
+        private FacturacionControl control;
 
         public Facturacion()
         {
@@ -22,7 +24,9 @@ namespace LinkPos
         public Facturacion(long OrderID)
         {
             InitializeComponent();
+            control = new FacturacionControl();
             this.OrderID = OrderID;
+            txtNumTck.Text= control.GenerarDocumento(this.OrderID,"E").ToString();
         }
 
         private void btnTck_Click(object sender, EventArgs e)
