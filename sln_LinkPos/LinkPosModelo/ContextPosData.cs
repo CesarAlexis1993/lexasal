@@ -7,8 +7,8 @@ namespace LinkPosModelo
 
     public partial class ContextPosData : DbContext
     {
-        public ContextPosData()
-            : base("name=ContextPosData")
+        public ContextPosData(string conString)
+            : base(conString)
         {
         }
 

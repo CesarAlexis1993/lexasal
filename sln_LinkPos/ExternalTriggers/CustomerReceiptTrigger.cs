@@ -1,5 +1,6 @@
 ﻿using LinkPos;
 using System;
+using System.Windows.Forms;
 
 namespace ExternalTriggers
 {
@@ -9,11 +10,19 @@ namespace ExternalTriggers
         {
             try
             {
-                Facturacion factu = new Facturacion();
+                Facturacion factu = new Facturacion(OrderID);
+                factu.FormBorderStyle = FormBorderStyle.None;
+                factu.ShowDialog();
 
-                if(factu.)
+                if (factu.DialogResult== DialogResult.OK)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
 
-                return true;
             }
             catch (Exception e)
             {

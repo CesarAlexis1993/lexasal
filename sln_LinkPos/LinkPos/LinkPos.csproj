@@ -80,6 +80,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -94,6 +95,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LinkPosControl\LinkPosControl.csproj">
+      <Project>{ff1c8614-f3c5-43ed-959b-eb4f9b1c3ac3}</Project>
+      <Name>LinkPosControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LinkPosModelo\LinkPosModelo.csproj">
+      <Project>{761db94e-ef77-480b-8ceb-418d2eca9104}</Project>
+      <Name>LinkPosModelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="DataPos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\FacturacionControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -61,8 +62,6 @@
       <Name>LinkPosModelo</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Vistas\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
