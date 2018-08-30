@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerReceiptExtensions",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalTriggers", "ExternalTriggers\ExternalTriggers.csproj", "{6D05C781-B9D2-473D-A6C6-13E77FF04644}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkPosUtils", "LinkPosUtils\LinkPosUtils.csproj", "{DAC56C7A-7CD1-410A-BDB4-2B40FC375B80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{6D05C781-B9D2-473D-A6C6-13E77FF04644}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D05C781-B9D2-473D-A6C6-13E77FF04644}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D05C781-B9D2-473D-A6C6-13E77FF04644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAC56C7A-7CD1-410A-BDB4-2B40FC375B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAC56C7A-7CD1-410A-BDB4-2B40FC375B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAC56C7A-7CD1-410A-BDB4-2B40FC375B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAC56C7A-7CD1-410A-BDB4-2B40FC375B80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

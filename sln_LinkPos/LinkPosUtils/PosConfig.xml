@@ -1,0 +1,65 @@
+﻿<configuracion>
+  <appconfig>
+    <nomapp>PosCentral</nomapp>
+    <nomempre>LA PAMPA ARGENTINA S.A DE C.V</nomempre>
+    <giro>RESTAURANTES</giro>
+    <nomcomer>LA PAMPA</nomcomer>
+    <sucursal>SUCURSAL SANTA ELENA</sucursal>
+    <dbprov>Microsoft.Jet.OLEDB.4.0</dbprov>
+    <dbruta>F:\POS_FISCAL\POS_FISCAL.mdb</dbruta>
+    <nocaja>1</nocaja>
+    <prt_tck>RECIBOS</prt_tck>
+    <prt_doc>FACTURAS</prt_doc>
+    <nomfont>Lucida Console</nomfont>
+    <nomfont_doc>Lucida Console</nomfont_doc>
+    <cantcar_tck>36</cantcar_tck>
+    <cantcar_doc>35</cantcar_doc>
+    <lineas_doc>97</lineas_doc>
+    <spcinicio_doc>10</spcinicio_doc>
+    <fntsize_tck>8.5</fntsize_tck>
+    <fntsize_doc>8.3</fntsize_doc>
+    <fntbold>1</fntbold>
+    <sepdoc>-</sepdoc>
+    <sepline>*</sepline>
+    <simbmone>$</simbmone>
+    <nombmone>USD</nombmone>
+    <impuesto1>1.13</impuesto1>
+  </appconfig>
+
+  <encabezado>
+    <linea1>BLK. 156 ARRIBA CLUB CAMPESTRE</linea1>
+    <linea2>SAN SALVADOR</linea2>
+    <linea3>SAN SALVADOR</linea3>
+    <linea4>TEL.: 2264-0892</linea4>
+    <linea5>NIT: 0614-210794-105-4</linea5>
+    <linea6>REG: 82551-4</linea6>
+    <linea7></linea7>
+    <linea8></linea8>
+    <linea9></linea9>
+    <linea10></linea10>
+    <linea11></linea11>
+    <linea12></linea12>
+    <linea13></linea13>
+    <linea14></linea14>
+    <linea15></linea15>
+  </encabezado>
+
+  <pie>
+    <linea1>GRACIAS POR SU PREFERECIA</linea1>
+    <linea2>TODOS LOS MONTOS SON GRAVADOS</linea2>
+    <linea3>CON DOLARES AMERICANOS</linea3>
+    <linea4></linea4>
+    <linea5></linea5>
+    <linea6></linea6>
+    <linea7></linea7>
+    <linea8></linea8>
+    <linea9></linea9>
+    <linea10></linea10>
+    <linea11></linea11>
+    <linea12></linea12>
+    <linea13></linea13>
+    <linea14></linea14>
+    <linea15></linea15>
+  </pie>
+
+</configuracion>
