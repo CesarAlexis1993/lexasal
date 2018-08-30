@@ -19,7 +19,6 @@ namespace LinkPos
 
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool bandera = false;
             try
             {
                 Facturacion factu = new Facturacion(44);
@@ -28,11 +27,11 @@ namespace LinkPos
 
                 if (factu.DialogResult == DialogResult.OK)
                 {
-                    bandera= true;
+                    
                 }
                 else
                 {
-                    bandera= false;
+
                 }
 
             }

@@ -26,11 +26,11 @@ namespace LinkPos
             InitializeComponent();
             control = new FacturacionControl();
             this.OrderID = OrderID;
-            txtNumTck.Text= control.GenerarDocumento(this.OrderID,"E").ToString();
         }
 
         private void btnTck_Click(object sender, EventArgs e)
         {
+            ImprimirDocumento(OrderID, "TCK");
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -56,6 +56,18 @@ namespace LinkPos
         {
             this.DialogResult = DialogResult.No;
             this.Close();
+        }
+
+        private DialogResult ImprimirDocumento(long OrderID,string TipoDocumento)
+        {
+            if(control.ImprimirDocumento(OrderID, TipoDocumento))
+            {
+                return DialogResult.OK;
+            }
+            else
+            {
+                return DialogResult.No;
+            }
         }
     }
 }

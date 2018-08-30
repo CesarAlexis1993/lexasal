@@ -42,11 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuracion.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="PosConfig.cs" />
     <Compile Include="PosImpresor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TexDoc.cs" />
+    <Compile Include="Texto.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="PosConfig.xml">

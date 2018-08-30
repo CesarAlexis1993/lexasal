@@ -7,7 +7,6 @@ namespace LinkPosUtils
 {
     public class PosImpresor
     {
-        private PosConfig config;
         private Font printFont;
 
         private int i = 0;
@@ -24,8 +23,7 @@ namespace LinkPosUtils
         private void Init()
         {
             lnxpagina = 0;
-            config = Configuracion.Obtener();
-            printFont = new Font(config.NomFont, (float)config.FontSize_Tck);
+            printFont = new Font(Config.Obtener.NomFont, (float)Config.Obtener.FontSize_Tck);
         }
 
         public int LineasPagina(string tpdoc)
@@ -33,11 +31,11 @@ namespace LinkPosUtils
             string pname;
             if (tpdoc.Equals("CCF") || tpdoc.Equals("FAC"))
             {
-                pname = config.Prt_Doc;
+                pname = Config.Obtener.Prt_Doc;
             }
             else
             {
-                pname = config.Prt_Tck;
+                pname = Config.Obtener.Prt_Tck;
             }
 
             PrinterSettings settings = new PrinterSettings();
@@ -57,11 +55,11 @@ namespace LinkPosUtils
 
                 if (tpdoc.Equals("CCF") || tpdoc.Equals("FAC"))
                 {
-                    pname = config.Prt_Doc;
+                    pname = Config.Obtener.Prt_Doc;
                 }
                 else
                 {
-                    pname = config.Prt_Tck;
+                    pname = Config.Obtener.Prt_Tck;
                 }
 
                 LineasPagina(tpdoc);

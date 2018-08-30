@@ -123,6 +123,7 @@ namespace LinkPosControl
                 catch (Exception e)
                 {
                     dbcxtransact.Rollback();
+                    throw new Exception("Se ha generado un error al intentar crear la entidad: " + e.Message);
                 }
             }
 

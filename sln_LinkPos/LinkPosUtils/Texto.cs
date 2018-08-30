@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LinkPosUtils
 {
-    public class TexDoc
+    public class Texto
     {
         public static string Agregar(string texto, int caracteres)
         {

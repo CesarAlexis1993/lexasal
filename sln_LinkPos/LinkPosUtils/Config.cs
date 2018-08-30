@@ -8,9 +8,24 @@ using System.Xml;
 
 namespace LinkPosUtils
 {
-    public class Configuracion
+    public class Config
     {
-        public static PosConfig Obtener()
+        private static PosConfig config=null;
+
+        public static PosConfig Obtener
+        {
+            get
+            {
+                if (config == null)
+                {
+                    config = Cargar();
+                }
+
+                return config;
+            }
+        }
+
+        private static PosConfig Cargar()
         {
             List<string> lstEncabezado = new List<string>();
             List<string> lstPie = new List<string>();
