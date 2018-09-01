@@ -25,8 +25,11 @@ namespace LinkPosControl.Vistas
             {
                 #region Variables Modelo
                 Tickets tck = contexdb.Get<Tickets>(x => x.TicketId == OrderID);
+                QuickServeCustomers quickServeCustomers = contexdb.Get<QuickServeCustomers>(x => x.TicketId == tck.TicketId);
+                CustomerDetails customerDetails = contexdb.Get<CustomerDetails>(x => x.CustomerID == tck.CustomerDetailsId);
                 OrderTypes tipoOrden = contexdb.Get<OrderTypes>(x => x.OrderTypeId == tck.OrderTypeId);
                 SeatingChartDetails mesa = contexdb.Get<SeatingChartDetails>(x => x.SeatingChartId == tck.SeatingChartId);
+                List<TicketDetails> detalle = contexdb.GetAll<TicketDetails>(x => x.TicketID == tck.TicketId && x.ItemStatusId != 3 && x.Price != 0).ToList();
                 #endregion
 
                 ls.Add(Texto.Centrar(Config.Obtener.NomComer, Config.Obtener.CantCar_Tck));
@@ -54,7 +57,15 @@ namespace LinkPosControl.Vistas
                     ls.Add(Texto.Centrar("MESA : " + mesa.TableCaption, "PERSONAS: " + tck.Guests, Config.Obtener.CantCar_Tck));
                 }
                 ls.Add(Texto.Repetir('*', Config.Obtener.CantCar_Tck));
-                ls.Add(Texto.EncabDetalle("CNT", "PRODUCTO", "P.UNIT", "TOTAL", Config.Obtener.CantCar_Tck));
+                ls.Add(Texto.EncabDetalle("CNT", "PRODUCTO", "TOTAL", Config.Obtener.CantCar_Tck));
+                ls.Add(Texto.Repetir('.', Config.Obtener.CantCar_Tck));
+
+                foreach(TicketDetails d in detalle)
+                {
+                    ls.Add(Texto.Detalle(d.Quantity.ToString(), d.ItemName, (d.Quantity * d.Price).ToString(), Config.Obtener.CantCar_Tck));
+                }
+
+
 
                 return ls;
             }
