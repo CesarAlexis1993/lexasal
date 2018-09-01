@@ -163,7 +163,7 @@ namespace LinkPosUtils
             }
         }
 
-        public static string EncabDetalle(string cantidad, string descrip, string total, int caracteres)
+        public static string EncabDetalle(string cantidad, string descrip,string punit, string total, int caracteres)
         {
             try
             {
@@ -176,6 +176,23 @@ namespace LinkPosUtils
                     cantidad = new string(' ', (6 - cantidad.Length)) + cantidad;
                 }
 
+                if (descrip.Length > (caracteres - 10))
+                {
+                    descrip = descrip.Substring(0, caracteres - 10);
+                }
+                else
+                {
+                    descrip = new string(' ', (caracteres - (descrip.Length + 10)) / 2) + descrip + new string(' ', (caracteres - (descrip.Length + 10)) / 2);
+                }
+
+                if (punit.Length > 6)
+                {
+                    punit = punit.Substring(0, 6);
+                }
+                else
+                {
+                    punit = new string(' ', (6 - punit.Length)) + punit;
+                }
 
                 if (total.Length > 8)
                 {
@@ -186,16 +203,9 @@ namespace LinkPosUtils
                     total = new string(' ', (8 - total.Length)) + total;
                 }
 
-                if (descrip.Length > (caracteres - 16))
-                {
-                    descrip = descrip.Substring(0, caracteres - 16);
-                }
-                else
-                {
-                    descrip = new string(' ', (caracteres - (descrip.Length + 16)) / 2) + descrip + new string(' ', (caracteres - (descrip.Length + 16)) / 2);
-                }
+                
 
-                return cantidad + " " + descrip + " " + total;
+                return cantidad + " " + descrip + " " +punit+" "+ total;
 
             }
             catch (Exception e)
