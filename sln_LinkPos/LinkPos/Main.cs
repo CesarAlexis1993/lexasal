@@ -21,7 +21,7 @@ namespace LinkPos
         {
             try
             {
-                Facturacion factu = new Facturacion(44);
+                Facturacion factu = new Facturacion(1001);
                 factu.FormBorderStyle = FormBorderStyle.None;
                 factu.ShowDialog();
 

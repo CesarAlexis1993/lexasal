@@ -29,7 +29,8 @@ namespace LinkPosControl.Vistas
                 CustomerDetails customerDetails = contexdb.Get<CustomerDetails>(x => x.CustomerID == tck.CustomerDetailsId);
                 OrderTypes tipoOrden = contexdb.Get<OrderTypes>(x => x.OrderTypeId == tck.OrderTypeId);
                 SeatingChartDetails mesa = contexdb.Get<SeatingChartDetails>(x => x.SeatingChartId == tck.SeatingChartId);
-                List<TicketDetails> detalle = contexdb.GetAll<TicketDetails>(x => x.TicketID == tck.TicketId && x.ItemStatusId != 3 && x.Price != 0).ToList();
+                List<TicketDetails> detaOrden = contexdb.GetAll<TicketDetails>(x => x.TicketID == tck.TicketId && x.ItemStatusId != 3 && x.Price != 0).OrderBy(x => x.TicketDetailsId).ToList();
+                //var detalle = 
                 #endregion
 
                 ls.Add(Texto.Centrar(Config.Obtener.NomComer, Config.Obtener.CantCar_Tck));
@@ -60,10 +61,13 @@ namespace LinkPosControl.Vistas
                 ls.Add(Texto.EncabDetalle("CNT", "PRODUCTO", "TOTAL", Config.Obtener.CantCar_Tck));
                 ls.Add(Texto.Repetir('.', Config.Obtener.CantCar_Tck));
 
-                foreach(TicketDetails d in detalle)
+                foreach(TicketDetails d in detaOrden)
                 {
+
                     ls.Add(Texto.Detalle(d.Quantity.ToString(), d.ItemName, (d.Quantity * d.Price).ToString(), Config.Obtener.CantCar_Tck));
                 }
+
+                ls.Add(Texto.Repetir('.', Config.Obtener.CantCar_Tck));
 
 
 
