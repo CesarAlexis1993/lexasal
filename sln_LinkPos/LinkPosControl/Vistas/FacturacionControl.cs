@@ -76,6 +76,7 @@ namespace LinkPosControl.Vistas
                 }
 
                 ls.Add(Texto.Repetir('.', Config.Obtener.CantCar_Tck));
+                ls.Add(Texto.Centrar("TOTAL VENTAS:", tck.Subtotal.ToString(), Config.Obtener.CantCar_Tck));
 
 
 

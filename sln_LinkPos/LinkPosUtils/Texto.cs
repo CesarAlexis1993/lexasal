@@ -177,22 +177,22 @@ namespace LinkPosUtils
                 }
 
 
-                if (total.Length > 8)
+                if (total.Length > 10)
                 {
-                    total = total.Substring(0, 8);
+                    total = total.Substring(0, 10);
                 }
                 else
                 {
-                    total = new string(' ', (8 - total.Length)) + total;
+                    total = new string(' ', (10 - total.Length)) + total;
                 }
 
-                if (descrip.Length > (caracteres - 16))
+                if (descrip.Length >  16)
                 {
-                    descrip = descrip.Substring(0, caracteres - 16);
+                    descrip = descrip.Substring(0,16);
                 }
                 else
                 {
-                    descrip = new string(' ', (caracteres - (descrip.Length + 16)) / 2) + descrip + new string(' ', (caracteres - (descrip.Length + 16)) / 2);
+                    descrip = new string(' ', (16- descrip.Length) / 2) + descrip + new string(' ', (16 - descrip.Length) / 2);
                 }
 
                 return cantidad + " " + descrip + " " + total;
@@ -222,22 +222,22 @@ namespace LinkPosUtils
 
                 total = string.Format("{0:n2}", decimal.Parse(total));
 
-                if (total.Length > 7)
+                if (total.Length > 9)
                 {
-                    total = new string('*', 7);
+                    total = new string('*', 9);
                 }
                 else
                 {
-                    total = new string(' ', 7 - total.Length) + total;
+                    total = new string(' ', 9 - total.Length) + total;
                 }
 
-                if (descrip.Length > (caracteres - 15))
+                if (descrip.Length > 19)
                 {
-                    descrip = descrip.Substring(0, caracteres - 15);
+                    descrip = descrip.Substring(0, 19);
                 }
                 else
                 {
-                    descrip = descrip + new string(' ', (caracteres - 15) - descrip.Length);
+                    descrip = descrip + new string(' ',  19-descrip.Length);
                 }
 
                 return cantidad + " " + descrip + " " + total;
